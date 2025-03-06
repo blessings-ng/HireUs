@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireUs || Applied page</title>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="appliedjobPage.css">
+    <link rel="stylesheet" href="utilities.css">
+</head>
+<body>
+    <div class="container">
+        <!-- navbar area start-->
+         
+         <!-- navbar area end-->
+         <main class="main">
+            <!-- start of sidebar -->
+            <section class="sidebar">
+                <div class="profileCard">
+                    <div class="profile-image-wrap">
+                        <div class="image-wrap">
+                            <img src="images/user1.jpg" alt="">
+                        </div>
+                        <a href="updateProfile.html"><i class="fa-solid fa-pencil editBtn"></i></a>
+                    </div>
+                    <div class="profile-description">
+                        <h3 class="profile-name">John Doe</h3>
+                        <p class="location">Uganda, Kampala</p>
+                        <div class="bio">
+                            <div class="bio-info">
+                                <span>Work Experience</span>
+                                <p>+5 years</p>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <div class="wrap">
+                                <i class="fa-solid fa-square-envelope"></i>
+                                <a href="#" class="contact-link">testemail@gmail.com</a>
+                            </div>
+                            <div class="wrap">
+                                <i class="fa-solid fa-square-phone"></i>
+                                <p><span class="code">+256</span><span>78935536</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="buttonUpdate">
+                        <a href="update.html">Update Your CV</a>
+                    </button>
+                </div>
+            </section>
+            <!-- end of sidebar -->
+            
+            <section class="main-section">
+                <!-- top-bar  start-->
+                <div class="topBar">
+                    <div class="topBar-tab">
+                        <button id="tab-1" class="topTab active">
+                            <span>Applied Jobs</span>
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            
+                        </button>
+                        <button id="tab-1" class="topTab">
+                            <span>Saved Jobs</span>
+                            <i class="fa-regular fa-star"></i>
+                        </button>
+                        <button id="tab-1" class="topTab">
+                            <span>Browse All Jobs</span>
+                            <i class="fa-solid fa-globe"></i>
+                        </button>
+                    </div>
+                    <div class="search-wrap">
+                        <input type="search" class="searchbar">
+                        <button class="searchBtn">
+                            <span>search</span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- top-bar  end-->
+
+                <!-- start content for tab-1 / applied jobs -->
+                <div class="main-tab-content">
+                    <div class="section-cards">
+                        <div class="section-card">
+                            <div class="topCard-content">
+                                <h4>Web Developer</h4>
+                                <div class="appliedPost">
+                                    <p>Applied: <span>12</span> days ago</p>
+                                </div>
+                            </div>
+                            <div class="middleCard-content">
+                                <p>Microsoft,</p>
+                                <p>New York</p>
+                            </div>
+                            <div class="bottomCard-content">
+                                <p class="card-description">
+                                    As a Web Developer, you will be responsible for designing, developing, and maintaining web applications. You will work closely with the design and backend teams to ensure a smooth and seamless user experience for all web applications.
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <button class="viewActionBtn">
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <span>View</span>
+                                </button>
+                                <button class="removeActionBtn">
+                                    <span><i class="fa-regular fa-trash-can"></i></span>
+                                    <span>Delete</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="section-card">
+                            <div class="topCard-content">
+                                <h4>Human Resource Manager</h4>
+                                <div class="appliedPost">
+                                    <p>Applied: <span>14</span> days ago</p>
+                                </div>
+                            </div>
+                            <div class="middleCard-content">
+                                <p>Microsoft,</p>
+                                <p>New York</p>
+                            </div>
+                            <div class="bottomCard-content">
+                                <p class="card-description">
+                                    As a Human Resource Manager, you will be responsible for overseeing the recruitment, training, and development of employees within the company. You will work closely with leadership teams to implement policies that promote a positive and productive work environment.
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <button class="viewActionBtn">
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <span>View</span>
+                                </button>
+                                <button class="removeActionBtn">
+                                    <span><i class="fa-regular fa-trash-can"></i></span>
+                                    <span>Delete</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="section-card">
+                            <div class="topCard-content">
+                                <h4>Frontend Developer</h4>
+                                <div class="appliedPost">
+                                    <p>Applied: <span>20</span> days ago</p>
+                                </div>
+                            </div>
+                            <div class="middleCard-content">
+                                <p>Google,</p>
+                                <p>California</p>
+                            </div>
+                            <div class="bottomCard-content">
+                                <p class="card-description">
+                                    Join our team of frontend developers at Google. You will build responsive and accessible web applications, collaborate with cross-functional teams, and help improve the overall user experience.
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <button  class="viewActionBtn">
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <span>View</span>
+                                </button>
+                                <button class="removeActionBtn">
+                                    <span><i class="fa-regular fa-trash-can"></i></span>
+                                    <span>Delete</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="section-card">
+                            <div class="topCard-content">
+                                <h4>Full Stack Developer</h4>
+                                <div class="appliedPost">
+                                    <p>Applied: <span>26</span> days ago</p>
+                                </div>
+                            </div>
+                            <div class="middleCard-content">
+                                <p>Amazon</p>
+                                <p>Seattle</p>
+                            </div>
+                            <div class="bottomCard-content">
+                                <p class="card-description">
+                                    As a Full Stack Developer at Amazon, you'll work on both the frontend and backend of applications. You'll design and implement new features, improve performance, and ensure applications are scalable and secure.
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <button  class="viewActionBtn">
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <span>View</span>
+                                </button>
+                                <button class="removeActionBtn">
+                                    <span><i class="fa-regular fa-trash-can"></i></span>
+                                    <span>Delete</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="seeAllButtonWrap">
+                            <button class="see-more-btn">
+                                <span>View More</span>
+                                <span><i class="fa-solid fa-eye"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end content for tab-1 -->
+                
+                <!-- start content for tab-2 /saved jobs -->
+                <div class="main-tab-content hidden">
+                    <div class="section-cards">
+                        <div class="section-card">
+                            <div class="topCard-content">
+                                <h4>Marketing Manager</h4>
+                                <div class="isAvailable">
+                                    <p>Available: <span>2</span> days left</p>
+                                </div>
+                            </div>
+                            <div class="middleCard-content">
+                                <p>Google,</p>
+                                <p>San Francisco</p>
+                            </div>
+                            <div class="bottomCard-content">
+                                <p class="card-description">
+                                    As a Marketing Manager, you will be responsible for planning, executing, and overseeing the company's marketing strategies. You will collaborate with product, sales, and creative teams to drive brand awareness, customer acquisition, and retention.
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <button class="viewActionBtn">
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <span>View</span>
+                                </button>
+                                <button class="removeActionBtn">
+                                    <span><i class="fa-regular fa-trash-can"></i></span>
+                                    <span>Remove</span>
+                                </button>
+                                <button class="removeActionBtn">
+                                    <span><i class="fa-regular fa-trash-can"></i></span>
+                                    <span>Apply</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="section-card">
+                            <div class="topCard-content">
+                                <h4>Project Manager</h4>
+                                <div class="hasExpired">
+                                    <p>Expired: <span>8</span> days ago
+                                </p>
+                            </div>
+                            </div>
+                            <div class="middleCard-content">
+                                <p>Tesla</p>
+                                <p>Palo Alto</p>
+                            </div>
+                            <div class="bottomCard-content">
+                                <p class="card-description">
+                                    As a Project Manager, you'll be responsible for managing and overseeing the completion of projects, ensuring that goals are met on time and within budget. You'll work closely with both technical and non-technical teams.
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <button class="viewActionBtn">
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <span>View</span>
+                                </button>
+                                <button class="removeActionBtn">
+                                    <span><i class="fa-regular fa-trash-can"></i></span>
+                                    <span>Remove</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="seeAllButtonWrap">
+                            <button class="see-more-btn">See More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end content for tab-2-->
+
+                 <!-- start content for tab-3 /browse jobs -->
+                <div class="main-tab-content  hidden" id="tab-content-3">
+                    <div class="section-cards">
+                        <div class="section-card">
+                            <div class="topCard-content">
+                                <h4>Software Engineer</h4>
+                                <div class="isAvailable">
+                                    <p>Posted: <span>5</span> days ago</p>
+                                </div>
+                            </div>
+                            <div class="middleCard-content">
+                                <p>Apple,</p>
+                                <p>Cupertino</p>
+                            </div>
+                            <div class="bottomCard-content">
+                                <p class="card-description">
+                                    As a Software Engineer at Apple, you'll be tasked with designing and developing software solutions that power the products and services used by millions of people around the world.
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <button class="viewActionBtn">
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <span>View</span>
+                                </button>
+                                <button class="applyActionBtn">
+                                    <span><i class="fa-regular fa-trash-can"></i></span>
+                                    <span>Apply</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="section-card">
+                            <div class="topCard-content">
+                                <h4>Project Manager</h4>
+                                <div class="hasExpired">
+                                    <p>Expired: <span>8</span> days ago
+                                </p>
+                            </div>
+                            </div>
+                            <div class="middleCard-content">
+                                <p>Tesla</p>
+                                <p>Palo Alto</p>
+                            </div>
+                            <div class="bottomCard-content">
+                                <p class="card-description">
+                                    As a Project Manager, you'll be responsible for managing and overseeing the completion of projects, ensuring that goals are met on time and within budget. You'll work closely with both technical and non-technical teams.
+                                </p>
+                            </div>
+                            <div class="actions">
+                                <button class="viewActionBtn">
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <span>View</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="seeAllButtonWrap">
+                             <button class="see-more-btn">See More</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- end content for tab-3/ browse jobs -->
+            </section>
+            
+         </main>
+         <!-- footer start here -->
+          
+          <!-- footer end here -->
+    </div>
+    <script src="appliedjobPage.js"></script>
+</body>
+</html>
