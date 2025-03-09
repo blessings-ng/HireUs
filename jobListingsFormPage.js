@@ -19,21 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
             section.style.display = i === index ? "block" : "none";
         });
 
-        // update progress bar
         progressSteps.forEach((step, i) => {
-            if (i <= index) {
-                step.classList.add("active");
-            } else {
-                step.classList.remove("active");
-            }
+            step.classList.toggle("active", i <= index);
         });
-
-        // setting smooth transition to the progress bar 
-        setTimeout(() => {
-            progressSteps.forEach((step, i) => {
-                step.style.transition = "background-color 0.3s ease-in-out";
-            });
-        }, 100);
 
         localStorage.setItem("currentSection", index);
     }
@@ -59,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Check for email validation if the field exists
+        // Validate email if present
         if (emailInput) {
             if (!validateEmail(emailInput.value.trim())) {
                 valid = false;
@@ -73,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return valid;
     }
 
-    // Next button Handler
+    // Next button handler
     nextBtn.forEach(button => {
         button.addEventListener("click", function (e) {
             e.preventDefault();
@@ -84,14 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     currentSection++;
                     showSection(currentSection);
                 }
-            } else {
-                inputs.classList.add("error");
-                console.log("error")
             }
         });
     });
 
-    // Previous button Handler
+    // Previous button handler
     prevBtn.forEach(button => {
         button.addEventListener("click", function (e) {
             e.preventDefault();
@@ -102,10 +87,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    dropFile();
-
-    // Function to handle the drag and drop functionality
+    // Drag & Drop File Functionality
     function dropFile() {
+        // Prevent default behavior on drag over
+        dropArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropArea.classList.add("drag-over");
+        });
+
+        dropArea.addEventListener("dragleave", () => {
+            dropArea.classList.remove("drag-over");
+        });
+
         dropArea.addEventListener("drop", (e) => {
             e.preventDefault();
             dropArea.classList.remove("drag-over");
@@ -117,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 inputError.classList.remove("show");
             } else {
                 inputError.classList.add("show");
+                setTimeout(() => inputError.classList.remove("show"), 3000);
             }
         });
 
@@ -133,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
             inputError.classList.remove("show");
         } else {
             inputError.classList.add("show");
+            setTimeout(() => inputError.classList.remove("show"), 3000); 
         }
     });
 
@@ -145,12 +140,24 @@ document.addEventListener("DOMContentLoaded", function () {
         const lastSection = formSections[currentSection];
         if (!validateSection(lastSection)) {
             e.preventDefault();
-            alert("Please fill out all required fields correctly.");
+            showError();
         } else {
-            alert("submission successful.");
-            
+            alert("Submission successful.");
         }
     });
 
+    function showError() {
+        const errorContainer = document.querySelector(".errorMsg-wrap");
+        const errorMessage = document.createElement("p");
+        errorMessage.textContent = "Invalid input!";
+        errorMessage.style.color = "red";
+        errorContainer.appendChild(errorMessage);
+
+        setTimeout(() => {
+            errorMessage.remove();
+        }, 3000);
+    }
+
+    dropFile(); 
     showSection(currentSection);
 });

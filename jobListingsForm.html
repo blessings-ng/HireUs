@@ -34,6 +34,8 @@
                 <div class="progress-step">3</div>
             </div>
          </section>
+
+         <section class="errorMsg-wrap"></section>
         <!-- job Listing section -->
         <section class="form-wrapper section-wrapping">
             <!-- job Listing Form -->
@@ -50,10 +52,20 @@
                             <input type="email" class="email" name="companyEmail" placeholder="Enter Company email" required>
                         </div>
                     </div>
+                    <div class="input-field">
+                        <label for="businessType">Business Category</label>
+                        <select class="requiredField" name="businessType" required>
+                            <option value="">Select business type</option>
+                            <option value="USA">Partnership</option>
+                            <option value="Ghana">Sole Proprietorship</option>
+                            <option value="Kenya">Non Profile</option>
+                            <option value="Nigeria">S Corporation</option>
+                        </select>
+                    </div>
                     <div class="input-group three-col">
                         <div class="input-field">
                             <label for="country">Country</label>
-                            <select class="requiredField" name="country">
+                            <select class="requiredField" name="country" required>
                                 <option value="">Select company location</option>
                                 <option value="USA">USA</option>
                                 <option value="Ghana">Ghana</option>
@@ -63,13 +75,18 @@
                             </select>
                         </div>
                         <div class="input-field">
-                            <label for="address">Address/ Street</label>
-                            <input type="text" class="requiredField" name="address" placeholder="Enter Company physical address" required>
+                            <label for="city">City Or Town</label>
+                            <input type="text" class="requiredField" name="city" placeholder="Enter City or Town Name e.g Lagos" required>
                         </div>
                         <div class="input-field">
-                            <label for="zipCode">Zip Code(Optional)</label>
-                            <input type="text" class="optional" name="zipCode" placeholder="Enter zip code" required>
+                            <label for="address">Address  Or Street</label>
+                            <input type="text" class="requiredField" name="address" placeholder="Enter Company physical address" required>
                         </div>
+                        
+                    </div>
+                    <div class="input-field">
+                        <label for="zipCode">Zip Code(Optional)</label>
+                        <input type="text" class="optional" name="zipCode" placeholder="Enter zip code" required>
                     </div>
                     <div class="button-wrap">
                         <button class="nextBtn">Next</button>
@@ -77,9 +94,15 @@
                 </div>
                 <div class="form-section2">
                     <h3 class="input-group-title">Job Information</h3>
-                    <div class="input-field">
-                        <label for="jobTitle">Job Title</label>
-                        <input type="text" class="requiredField" name="jobTitle" required>
+                    <div class="input-group two-col">
+                        <div class="input-field">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" class="requiredField" name="jobTitle" required placeholder="e.g Full Stack Web Developer">
+                        </div>
+                        <div class="input-field">
+                            <label for="jobTitle">Vacancy</label>
+                            <input type="number" class="requiredField" name="Vacancy" required placeholder="e.g 10">
+                        </div>
                     </div>
                     <div class="input-field">
                         <label for="jobDescription">Description</label>
@@ -97,10 +120,7 @@
                         <input type="file" name="file" required>
                         <div class="file-name"></div>
                     </div>
-                    <div class="input-field">
-                        <label for="jobLink">Application Link</label>
-                        <input type="text" name="jobLink" placeholder="Enter job application link" required>
-                    </div>
+                    
                     <div class="btn-wrap">
                         <button class="prevtBtn">Previous</button>
                         <button  class="nextBtn">Next</button>
@@ -109,7 +129,7 @@
                 <div class="form-section3">
                     <div class="input-group two-col">
                         <div class="input-field">
-                            <label for="contractType">Job Type</label>
+                            <label for="contractType">Placement Location</label>
                             <select class="requiredField" name="contractType" required>
                                 <option value="">Select job job Type</option>
                                 <option value="Full time Job">Remote</option>
@@ -117,12 +137,35 @@
                             </select>
                         </div>
                         <div class="input-field">
-                            <label for="contractType">Contract type</label>
+                            <label for="contractType">Job type</label>
                             <select class="requiredField" name="contractType" required>
                                 <option value="">Select job contract Type</option>
-                                <option value="Full time Job">Full Time</option>
-                                <option value="Part time Job">Part Time</option>
+                                <option value="Full-Time">Full Time</option>
+                                <option value="Part-Time">Part Time</option>
+                                <option value="Contract">Contract</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Freelancer">Freelancer</option>
                             </select>
+                        </div>
+                    </div>
+                    <h3 class="input-group-title">Salary Range</h3>
+                    <div class="inputs-group three-col">
+                        <div class="input-field">
+                            <label for="contractType">Currency</label>
+                            <select class="requiredField" name="contractType" required>
+                                <option value="">Select currency</option>
+                                <option value="$">USD</option>
+                                <option value="UGX">UGX</option>
+                                <option value="£">EUR</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="Salary-min">Minimum Value</label>
+                            <input type="number"  name="salary-min" placeholder="E.g $2000">
+                        </div>
+                        <div class="input-field">
+                            <label for="Salary-max">Maximum value</label>
+                            <input type="number" name="salary-max" placeholder="E.g $8000">
                         </div>
                     </div>
                     <div class="inputs-group two-col">
@@ -131,11 +174,14 @@
                             <input type="date" class="requiredField" name="date" required>
                         </div>
                         <div class="input-field">
-                            <label for="jobTitle">Expiry Date</label>
+                            <label for="jobTitle">Application Deadline</label>
                             <input type="date" class="requiredField" name="date" required>
                         </div>
                     </div>
-                    
+                    <div class="input-field">
+                        <label for="jobLink">Application Link</label>
+                        <input type="text" name="jobLink" placeholder="Enter job application link" required>
+                    </div>
                     <div class="checkbox-wrap" style="margin-top: 20px;">
                         <label for="jobTitle"></label>
                         <input type="checkbox" name="jobTitle" required class="required">

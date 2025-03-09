@@ -1,40 +1,46 @@
-body{
+body {
     background-color: var(--main-background-color);
     scroll-behavior: smooth;
+    font-size: var(--xs);
 }
 
-.hidden{
+.hidden {
     display: none;
 }
-
-.main{
-    display: flex;
-    gap: 1.2rem;
-    padding: 1.2rem 4rem;
+.elCenter{
+    margin: 0 auto;
 }
+.main {
+    display: flex;
+    gap: var(--gap);
+    padding: var(--padding-lg) var(--padding-xxl);
+}
+
 /* ------sidebar styles start */
-.sidebar{
+.sidebar {
     width: 25%;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: var(--gap);
 }
-.profileCard{
+
+.profileCard {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--bg-white);
     padding: var(--padding-xxl);
-    border-radius: 10px;
+    border-radius: var(--border-radius-md);
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: var(--gap);
 }
-.profile-image-wrap{
+
+.profile-image-wrap {
     display: flex;
     justify-content: space-between;
 }
-.profile-image-wrap .editBtn{
-    cursor: pointer;
+.profile-image-wrap i, .profile-name{
+    color: var(--text-color);
 }
 .image-wrap{
     width: 60px;
@@ -50,43 +56,30 @@ body{
 .bio-info{
     display: flex;
     justify-content: space-between;
-    font-size: 0.8rem;
-    color: #444444;
     margin: 1.2rem 0;
+    font-size: var(--sm);
+    color: var(--text-color);
 }
-.location{
-    font-size: 0.9rem;
-    color: #444444;
-}
-.bio-info p{
-    color: #e78504;
-    font-weight: bold;
-}
+
 .contact-info .wrap{
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #444444;
+    color: var(--text-color);
 }
-.profile-image-wrap i{
-    color: #444444;
-}
-.profile-name{
-    color: #208d04;
-}
+
 .contact-info .wrap a{
     text-decoration: none;
-    color: #444444;
-    font-size: 0.9rem;
+    color: var(--text-color);
+    font-size: var(--sm);
 }
 
 .buttonUpdate{
     width: 100%;
     background-color:var(--button-backgroundColor); 
     color: var(button-textColor);
-
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: var(--sm);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -105,31 +98,33 @@ body{
     display: flex;
     flex-direction: column;
     height: fit-content;
-    background-color: var(--background-color);
     border-radius: 10px;
+    padding: 0.8rem 0.4rem 0 0.4rem;
+    background-color: var(--bg-white);
 }
 
 /* top-bar styles start */
 .topBar{
-    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    margin-bottom: 0.2rem;
 }
 .topBar-tab{
     display: flex;
     gap: 0.3rem;
 }
+
 .topBar-tab .topTab{
     border-bottom: 2px;
-    padding: 6px;
+    padding: 8px;
     background: none;
     cursor: pointer;
     color: var(--text-color);
     border: 2px solid var(--border-color);
     transition: 0.5s ease all;
     border-radius: 5px;
+    font-size: var(--xxs);
 }
 .topBar-tab .topTab:hover{
     color: #eea303;
@@ -174,8 +169,7 @@ body{
 /* tabs content cards start */
 .main-tab-content{
     width: 100%;
-    padding:0 2rem 2rem 2rem;
-    margin: 0 auto;
+    padding:0.3rem 0 2rem 0;
     height: fit-content;
 }
 
@@ -187,13 +181,12 @@ body{
 .section-card{
     width: 100%;
     padding: 1.2rem;
-    background: #ffffff;
-    border: 1px solid #b9b9b934;
+    border: 1px solid var(--border-color);
     height: fit-content;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
 }
 
 .topCard-content{
@@ -201,8 +194,8 @@ body{
     justify-content: space-between;
 }
 .topCard-content h4{
-    color: var(--text-color);
-    font-size:1.2rem;
+    font-size:var(--md);
+    color: var(--primary-color);
     font-weight: 300;
 }
 .topCard-content p{
@@ -211,17 +204,16 @@ body{
 }
 .middleCard-content{
     display: flex;
-    
     gap: 4px;
 }
 .middleCard-content p{
-    font-size:0.8rem;
-    color: #979797;
+    font-size: var(--xs);
+    color: var(--text-color);
 }
 .card-description{
     width: 80%;
-    font-size: 0.9rem;
-    color: #444444;
+    font-size: var(--sm);
+    color: var(--text-color);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -257,15 +249,15 @@ body{
 }
 .topCard-content .hasExpired p{
     background-color:rgba(255, 188, 188, 0.863) ;
-    color:#292929;
+    color:var(--text-color);
 }
 .isAvailable p{
-    color:#3b3b3b;
+    color:var(--text-color);
     background-color: rgba(224, 255, 222, 0.808);
 }
 .appliedPost p{
     background: rgba(255, 235, 198, 0.856);
-    color: #272727;
+    color: var(--text-color);
 }
 .viewActionBtn:hover, .viewActionBtn:hover i {
     border-color:rgb(19, 161, 0) ;
@@ -291,18 +283,15 @@ body{
 }
 /* tabs content cards end */
 
-/* seem more button styling start */
+/* see more button styling start */
 .seeAllButtonWrap{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 2rem;
     padding-bottom: 2rem;
 }
 .seeAllButtonWrap button{
     background-color: var(--button-backgroundColor);
-    color: #fff;
+    color: var(--button-textColor);
     border: none;
     padding: 0.8rem 3rem;
     cursor: pointer;
@@ -310,37 +299,12 @@ body{
     display: flex;
     gap: 0.4rem;
 }
-/* seem more button styling end */
-
-/* footer styles start*/
-footer{
-    margin-top: 30px;
-    height: 20vh;
-    background-color: #444444;
-    color: #fff;
-    padding: 2rem;
-}
-/* footer styles end*/
-
+/* see more button styling end */
 
 /* responsiveness */
-/* Extra Small Phones */
-/* @media screen and (max-width: 320px) {
-    
-} */
 
 /* for small screens of max-width 480px */
 @media screen and (max-width:480px){
-    .navbar{
-        padding: 0.8rem 1.2rem;
-    }
-    .navMenu-icon i{
-        display: flex;
-        font-size: 2rem;
-    }
-    .nav-links{
-        display: none;
-    }
     
     .main{
         display: grid;
@@ -364,7 +328,7 @@ footer{
     }
     
     .topBar{
-        padding:0 0.2rem;
+        padding:0.6 0.2rem;
         display: grid;
         grid-template-columns: repeat(1,1fr);
         gap: 1.2rem;
@@ -433,7 +397,7 @@ footer{
         gap: 4px;
     }
     .middleCard-content p{
-        font-size:0.8rem;
+        font-size: var(--xs);
     }
     .bottomCard-content{
         margin: 0.6rem 0;
@@ -445,18 +409,6 @@ footer{
         color: var(--text-color);
         
     }
-    .actions{
-        gap: 4px;
-        border-top: 1px solid  var(--border-color);
-    }
-    .actions button{
-        background-color: var(--background-color);
-        padding: 8px 10px;
-        border-radius: 4px;
-        transition: 0.5s ease all;
-        border: none;
-    }
-    
     .actions button span {
         font-size: 0.6rem;
     }
@@ -465,16 +417,7 @@ footer{
 
 /* Medium Phones */
 @media screen and (min-width:480px) and (max-width: 600px) {
-    .navbar{
-        padding: 0.8rem 1.2rem;
-    }
-    .navMenu-icon i{
-        display: flex;
-        font-size: 2rem;
-    }
-    .nav-links{
-        display: none;
-    }
+    
     .main{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -566,7 +509,7 @@ footer{
         gap: 4px;
     }
     .middleCard-content p{
-        font-size:0.8rem;
+        font-size: var(--xs);
     }
     .bottomCard-content{
         margin: 0.6rem 0;
@@ -577,17 +520,6 @@ footer{
         font-size: 0.725rem;
         color: var(--text-color);
         
-    }
-    .actions{
-        gap: 4px;
-        border-top: 1px solid  var(--border-color);
-    }
-    .actions button{
-        background-color: var(--background-color);
-        padding: 8px 10px;
-        border-radius: 4px;
-        transition: 0.5s ease all;
-        border: none;
     }
     
     .actions button span {
@@ -597,16 +529,6 @@ footer{
 
 /* Tablets */
 @media screen and (min-width: 600px) and (max-width: 768px) {
-    .navbar{
-        padding: 0.8rem 1.2rem;
-    }
-    .navMenu-icon i{
-        display: flex;
-        font-size: 2rem;
-    }
-    .nav-links{
-        display: none;
-    }
     
     .main{
         display: grid;
@@ -699,7 +621,7 @@ footer{
         gap: 4px;
     }
     .middleCard-content p{
-        font-size:0.8rem;
+        font-size: var(--xs);
     }
     .bottomCard-content{
         margin: 0.6rem 0;
@@ -711,21 +633,6 @@ footer{
         color: var(--text-color);
         
     }
-    .actions{
-        gap: 4px;
-        border-top: 1px solid  var(--border);
-    }
-    .actions button{
-        background-color: var(--background-color);
-        padding: 8px 10px;
-        border-radius: 4px;
-        transition: 0.5s ease all;
-        border: none;
-    }
-    
-    .actions button span {
-        font-size: 0.6rem;
-    }
 }
 
 /* Large Tablets & Small Laptops */
@@ -735,13 +642,13 @@ footer{
         padding: 1.2rem 1.2rem;
     }
     .topBar{
-        padding:0 0.2rem;
+        padding:0rem;
         display: grid;
         grid-template-columns: repeat(1,1fr);
         gap: 1.2rem;
     }
     .topBar-tab{
-        width: 90%;
+        width: 100%;
         gap: 0.3rem;
         margin: 0 auto;
         order: 2;
@@ -750,7 +657,7 @@ footer{
         font-size: 0.625rem;
     }
     .search-wrap{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         order: 1;
     }
@@ -776,7 +683,7 @@ footer{
         font-size: 0.725rem;
     }
     .location{
-        font-size: 0.9rem;
+        font-size: var(--sm);
     }
     .bio-info p{
         font-weight: 400;
@@ -786,7 +693,7 @@ footer{
         font-size: 0.825rem;
     }
     .profile-name{
-        font-size: 0.9rem;
+        font-size: var(--sm);
     }
     .contact-info .wrap a{
         font-size: 0.8rem;
@@ -817,6 +724,6 @@ footer{
 }
 
 /* Extra Large Screens (Big Monitors) */
-@media screen and (min-width: 1201px) {
+/* @media screen and (min-width: 1201px) {
     
-}
+} */
