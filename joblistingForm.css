@@ -39,7 +39,9 @@ i{
     transform: translateX(-50%);
     text-align: center;
 }
-
+.hero-content h2{
+    font-size: var(--xl4);
+}
 .section-wrapping{
     width: 80%;
     height: fit-content;
@@ -307,6 +309,9 @@ input.success,textarea.success,select.success {
     .progress-bar {
         width: 60%; 
     }
+    .hero-content h2{
+        font-size: var(--lg);
+    }
     .section-wrapping{
         width: 100%;
         padding: var(--padding-sm);
@@ -335,6 +340,9 @@ input.success,textarea.success,select.success {
     .section-wrapping{
         width: 100%;
         padding: var(--padding-xl);
+    }
+    .hero-content h2{
+        font-size: var(--xl2);
     }
     .two-col{
         grid-template-columns: repeat(1,1fr);
