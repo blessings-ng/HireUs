@@ -1,0 +1,27 @@
+.btn-primary {
+  background-color: #343434;
+  color: #ffffff;
+  border: 1px solid #555555;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #242124;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.3);
+}
+.dashboard {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
