@@ -1,0 +1,729 @@
+body {
+    background-color: var(--main-background-color);
+    scroll-behavior: smooth;
+    font-size: var(--xs);
+}
+
+.hidden {
+    display: none;
+}
+.elCenter{
+    margin: 0 auto;
+}
+.main {
+    display: flex;
+    gap: var(--gap);
+    padding: var(--padding-lg) var(--padding-xxl);
+}
+
+/* ------sidebar styles start */
+.sidebar {
+    width: 25%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.profileCard {
+    width: 100%;
+    background-color: var(--bg-white);
+    padding: var(--padding-xxl);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.profile-image-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.profile-image-wrap i, .profile-name{
+    color: var(--text-color);
+}
+.image-wrap{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+ .image-wrap img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bio-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.2rem 0;
+    font-size: var(--sm);
+    color: var(--text-color);
+}
+
+.contact-info .wrap{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-color);
+}
+
+.contact-info .wrap a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: var(--sm);
+}
+
+.buttonUpdate{
+    width: 100%;
+    background-color:var(--button-backgroundColor); 
+    color: var(button-textColor);
+    padding: 12px 20px;
+    font-size: var(--sm);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.buttonUpdate a{
+    text-decoration: none;
+    color: var(--button-textColor);
+}
+/* sidebar styles end */
+
+.main-section{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 0.8rem 0.4rem 0 0.4rem;
+    background-color: var(--bg-white);
+}
+
+/* top-bar styles start */
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+.topBar-tab{
+    display: flex;
+    gap: 0.3rem;
+}
+
+.topBar-tab .topTab{
+    border-bottom: 2px;
+    padding: 8px;
+    background: none;
+    cursor: pointer;
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    transition: 0.5s ease all;
+    border-radius: 5px;
+    font-size: var(--xxs);
+}
+.topBar-tab .topTab:hover{
+    color: #eea303;
+    border-bottom: 2px solid #eea303;
+}
+
+.topBar-tab .topTab.active{
+    color: #208d04;
+    border-bottom: 2px solid green;
+}
+/* top-bar styles end */
+
+/* start of search bar styling */
+.search-wrap{
+    display: flex;
+    gap: 6px;
+}
+.searchbar{
+    width: 300px;
+    padding: 8px 4px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+}
+.searchbar:focus{
+    outline: none;
+    border: 2px solid var(--border-color);
+}
+.searchBtn{
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 2px solid var(--border-color);
+    background-color: var(--button-backgroundColor);
+    color: var(--button-textColor);
+    cursor: pointer;
+}
+/* end of search bar styling */
+
+/* tabs content cards start */
+.main-tab-content{
+    width: 100%;
+    padding:0.3rem 0 2rem 0;
+    height: fit-content;
+}
+
+.section-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.section-card{
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid var(--border-color);
+    height: fit-content;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.topCard-content{
+    display: flex;
+    justify-content: space-between;
+}
+.topCard-content h4{
+    font-size:var(--md);
+    color: var(--primary-color);
+    font-weight: 300;
+}
+.topCard-content p{
+    color: var(--danger-color);
+    font-size:0.6rem;
+}
+.middleCard-content{
+    display: flex;
+    gap: 4px;
+}
+.middleCard-content p{
+    font-size: var(--xs);
+    color: var(--text-color);
+}
+.card-description{
+    width: 80%;
+    font-size: var(--sm);
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.actions{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding: 8px 6px;
+    gap: 4px;
+    border-top: 1px solid  var(--border-color);
+    margin-top: 0.4rem;
+}
+.actions button{
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    background-color: var(--background-color);
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: 0.5s ease all;
+}
+
+.actions button span {
+    font-size: 0.6rem;
+}
+.actions button i{
+    color: var(--secondary-color);
+}
+.topCard-content p{
+    padding: 8px 6px;
+    border-radius: 4px;
+}
+.topCard-content .hasExpired p{
+    background-color:rgba(255, 188, 188, 0.863) ;
+    color:var(--text-color);
+}
+.isAvailable p{
+    color:var(--text-color);
+    background-color: rgba(224, 255, 222, 0.808);
+}
+.appliedPost p{
+    background: rgba(255, 235, 198, 0.856);
+    color: var(--text-color);
+}
+.viewActionBtn:hover, .viewActionBtn:hover i {
+    border-color:rgb(19, 161, 0) ;
+    color: rgb(19, 161, 0) ;
+}
+.removeActionBtn, .removeActionBtn span i {
+    color: #b10a0a;
+}
+.removeActionBtn:hover, .removeActionBtn:hover i {
+    border-color:red ;
+    color: #b10a0a;
+}
+.applyActionBtn{
+    color: rgb(19, 161, 0) ;
+}
+.applyActionBtn:hover, .applyActionBtn:hover i{
+    border-color:rgb(19, 161, 0) ;
+    color: rgb(19, 161, 0) ;
+}
+
+.isActive{
+    color: green;
+}
+/* tabs content cards end */
+
+/* see more button styling start */
+.seeAllButtonWrap{
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+.seeAllButtonWrap button{
+    background-color: var(--button-backgroundColor);
+    color: var(--button-textColor);
+    border: none;
+    padding: 0.8rem 3rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    gap: 0.4rem;
+}
+/* see more button styling end */
+
+/* responsiveness */
+
+/* for small screens of max-width 480px */
+@media screen and (max-width:480px){
+    
+    .main{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 0.3rem 0.2rem;
+        gap: 80px;
+        margin-top: 1.4rem;
+    }
+    .sidebar{
+        width: 100%;
+        order: 2;
+    }
+    .profileCard{
+        width: 95%;
+        padding: var(--padding-lg);
+        margin: 0 auto;
+    }
+    .main-section{
+        width: 100%;
+        gap: 1.2rem;
+    }
+    
+    .topBar{
+        padding:0.6 0.2rem;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1.2rem;
+    }
+    .topBar-tab{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 0.1rem;
+        width: 95%;
+        margin: 0 auto;
+        order: 2;
+    }
+    .topBar-tab .topTab span{
+        font-size: 0.625rem;
+    }
+    .topBar-tab .topTab{
+        padding: 6px;
+        
+    }
+    .search-wrap{
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        gap: 2px;
+        order: 1;
+    }
+    .searchbar{
+        width: 90%;
+        padding: 8px 4px;
+
+    }
+    .main-tab-content{
+        width: 95%;
+        padding:0;
+        margin: 0 auto;
+    }
+    .section-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding-bottom: 0.6rem;
+    }
+    .section-card{
+        padding: 0.8rem;
+        gap: 8px;
+    }
+    
+    .topCard-content{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: space-between;
+    }
+    .topCard-content h4{
+        order: 2;
+    }
+    .topCard-content p{
+        order: 1;
+        padding: 4px;
+        justify-self: end;
+        font-size: 0.6rem;
+        border-radius: 4px;
+    }
+   
+    .middleCard-content{
+        display: flex;
+        gap: 4px;
+    }
+    .middleCard-content p{
+        font-size: var(--xs);
+    }
+    .bottomCard-content{
+        margin: 0.6rem 0;
+    }
+    
+    .card-description{
+        width: 100%;
+        font-size: 0.725rem;
+        color: var(--text-color);
+        
+    }
+    .actions button span {
+        font-size: 0.6rem;
+    }
+    
+}
+
+/* Medium Phones */
+@media screen and (min-width:480px) and (max-width: 600px) {
+    
+    .main{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 0.3rem 0.2rem;
+        gap: 80px;
+        margin-top: 1.4rem;
+    }
+    .sidebar{
+        width: 100%;
+        order: 2;
+    }
+    .profileCard{
+        width: 95%;
+        padding: var(--padding-lg);
+        margin: 0 auto;
+    }
+    .main-section{
+        width: 100%;
+        gap: 1.2rem;
+    }
+    
+    .topBar{
+        padding:0 0.2rem;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1.2rem;
+    }
+    .topBar-tab{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 0.1rem;
+        width: 95%;
+        margin: 0 auto;
+        order: 2;
+    }
+    .topBar-tab .topTab span{
+        font-size: 0.625rem;
+    }
+    .topBar-tab .topTab{
+        padding: 6px;
+        
+    }
+    .search-wrap{
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        gap: 2px;
+        order: 1;
+    }
+    .searchbar{
+        width: 90%;
+        padding: 8px 4px;
+
+    }
+    .main-tab-content{
+        width: 95%;
+        padding:0;
+        margin: 0 auto;
+    }
+    .section-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        padding-bottom: 0.6rem;
+    }
+    .section-card{
+        padding: 0.8rem;
+        gap: 8px;
+    }
+    
+    .topCard-content{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: space-between;
+    }
+    .topCard-content h4{
+        order: 2;
+    }
+    .topCard-content p{
+        order: 1;
+        padding: 4px;
+        justify-self: end;
+        font-size: 0.6rem;
+        border-radius: 4px;
+    }
+   
+    .middleCard-content{
+        display: flex;
+        gap: 4px;
+    }
+    .middleCard-content p{
+        font-size: var(--xs);
+    }
+    .bottomCard-content{
+        margin: 0.6rem 0;
+    }
+    
+    .card-description{
+        width: 100%;
+        font-size: 0.725rem;
+        color: var(--text-color);
+        
+    }
+    
+    .actions button span {
+        font-size: 0.6rem;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    
+    .main{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        padding: 0.3rem 0.2rem;
+        gap: 10px;
+        margin-top: 1.4rem;
+    }
+    .sidebar{
+        width: 100%;
+        order: 2;
+    }
+    .profileCard{
+        width: 95%;
+        padding: var(--padding-sm);
+        margin: 0 auto;
+    }
+    .main-section{
+        width: 100%;
+        gap: 1.2rem;
+    }
+    
+    .topBar{
+        padding:0 0.2rem;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1.2rem;
+    }
+    .topBar-tab{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 0.1rem;
+        width: 95%;
+        margin: 0 auto;
+        order: 2;
+    }
+    .topBar-tab .topTab span{
+        font-size: 0.625rem;
+    }
+    .topBar-tab .topTab{
+        padding: 6px;
+        
+    }
+    .search-wrap{
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        gap: 2px;
+        order: 1;
+    }
+    .searchbar{
+        width: 90%;
+        padding: 8px 4px;
+
+    }
+    .main-tab-content{
+        width: 95%;
+        padding:0;
+        margin: 0 auto;
+    }
+    .section-cards{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.8rem;
+        padding-bottom: 0.6rem;
+    }
+    .section-card{
+        padding: 0.8rem;
+        gap: 8px;
+    }
+    
+    .topCard-content{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: space-between;
+    }
+    .topCard-content h4{
+        order: 2;
+    }
+    .topCard-content p{
+        order: 1;
+        padding: 4px;
+        justify-self: end;
+        font-size: 0.6rem;
+        border-radius: 4px;
+    }
+   
+    .middleCard-content{
+        display: flex;
+        gap: 4px;
+    }
+    .middleCard-content p{
+        font-size: var(--xs);
+    }
+    .bottomCard-content{
+        margin: 0.6rem 0;
+    }
+    
+    .card-description{
+        width: 100%;
+        font-size: 0.725rem;
+        color: var(--text-color);
+        
+    }
+}
+
+/* Large Tablets & Small Laptops */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .main{
+        gap: 0.7rem;
+        padding: 1.2rem 1.2rem;
+    }
+    .topBar{
+        padding:0rem;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 1.2rem;
+    }
+    .topBar-tab{
+        width: 100%;
+        gap: 0.3rem;
+        margin: 0 auto;
+        order: 2;
+    }
+    .topBar-tab .topTab span{
+        font-size: 0.625rem;
+    }
+    .search-wrap{
+        width: 100%;
+        margin: 0 auto;
+        order: 1;
+    }
+    .searchbar{
+        width: 90%;
+        padding: 8px 4px;
+    }
+
+    .profileCard{
+        padding: var(--padding-sm);;
+        gap: 0.9rem;
+    }
+    .profile-image-wrap{
+        display: flex;
+        justify-content: space-between;
+    }
+    .image-wrap{
+        width: 40px;
+        height: 40px;
+    }
+    .bio-info{
+        flex-direction: column;
+        font-size: 0.725rem;
+    }
+    .location{
+        font-size: var(--sm);
+    }
+    .bio-info p{
+        font-weight: 400;
+    }
+    .contact-info .wrap{
+        gap: 6px;
+        font-size: 0.825rem;
+    }
+    .profile-name{
+        font-size: var(--sm);
+    }
+    .contact-info .wrap a{
+        font-size: 0.8rem;
+    }
+    
+    .buttonUpdate{
+        padding: 0.8rem 0.2rem;
+        font-size: 0.725;
+    }
+    .buttonUpdate a{
+        font-size: 0.725;
+    }
+}
+
+/* Desktops */
+@media screen and (max-width: 1200px) {
+    .buttonUpdate{
+        padding: 0.8rem 0.2rem;
+        font-size: 0.725;
+    }
+    .buttonUpdate a{
+        font-size: 0.725;
+    }
+    .bio-info{
+        flex-direction: column;
+        font-size: 0.725rem;
+    }
+}
+
+/* Extra Large Screens (Big Monitors) */
+/* @media screen and (min-width: 1201px) {
+    
+} */

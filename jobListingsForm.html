@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job listing form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="joblistingForm.css">
+    <link rel="stylesheet" href="utilities.css">
+</head>
+<body>
+    <div class="container">
+        <!-- navbar start here -->
+
+         <!-- navbar end here -->
+        <!-- hero-section start here-->
+         <section class="hero-section">
+            <img src="images/joblistingForm-hero-image.jpg" alt="">
+            <div class="filter"></div>
+            <div class="hero-content">
+                <h2>You Are a few steps away</h3>
+                <p>
+                    Please fill out the form below to add jobs
+                </p>
+            </div>
+         </section>
+         <!-- hero-section end here-->
+
+         <section class="progress-section">
+            <!-- progress bar  -->
+            <div class="progress-bar" >
+                <div class="progress-step active">1</div>
+                <div class="progress-step">2</div>
+                <div class="progress-step">3</div>
+            </div>
+         </section>
+
+         <section class="errorMsg-wrap"></section>
+        <!-- job Listing section -->
+        <section class="form-wrapper section-wrapping">
+            <!-- job Listing Form -->
+            <form action="">
+                <div class="form-section1">
+                    <h3 class="input-group-title">Company or Organization Information</h3>
+                    <div class="input-group two-col">
+                        <div class="input-field">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" class="requiredField" name="companyName" placeholder="Enter Company name e.g Amazon" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="companyEmail">Company Email</label>
+                            <input type="email" class="email" name="companyEmail" placeholder="Enter Company email" required>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label for="businessType">Business Category</label>
+                        <select class="requiredField" name="businessType" required>
+                            <option value="">Select business type</option>
+                            <option value="USA">Partnership</option>
+                            <option value="Ghana">Sole Proprietorship</option>
+                            <option value="Kenya">Non Profile</option>
+                            <option value="Nigeria">S Corporation</option>
+                        </select>
+                    </div>
+                    <div class="input-group three-col">
+                        <div class="input-field">
+                            <label for="country">Country</label>
+                            <select class="requiredField" name="country" required>
+                                <option value="">Select company location</option>
+                                <option value="USA">USA</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Uganda">Uganda</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="city">City Or Town</label>
+                            <input type="text" class="requiredField" name="city" placeholder="Enter City or Town Name e.g Lagos" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="address">Address  Or Street</label>
+                            <input type="text" class="requiredField" name="address" placeholder="Enter Company physical address" required>
+                        </div>
+                        
+                    </div>
+                    <div class="input-field">
+                        <label for="zipCode">Zip Code(Optional)</label>
+                        <input type="text" class="optional" name="zipCode" placeholder="Enter zip code" required>
+                    </div>
+                    <div class="button-wrap">
+                        <button class="nextBtn">Next</button>
+                    </div>
+                </div>
+                <div class="form-section2">
+                    <h3 class="input-group-title">Job Information</h3>
+                    <div class="input-group two-col">
+                        <div class="input-field">
+                            <label for="jobTitle">Job Title</label>
+                            <input type="text" class="requiredField" name="jobTitle" required placeholder="e.g Full Stack Web Developer">
+                        </div>
+                        <div class="input-field">
+                            <label for="jobTitle">Vacancy</label>
+                            <input type="number" class="requiredField" name="Vacancy" required placeholder="e.g 10">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label for="jobDescription">Description</label>
+                        <textarea class="requiredField" name="jobDescription" id="jobDescription" placeholder="Enter job description" required></textarea>
+                    </div>
+                    <label>Or Upload File (Option)</label>
+                    <div class="input-field dropbox">
+                        <span class="inputError">*invalid ! Please select a PDF or DOCX file.</span>
+                        <span>
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </span>
+                        <p class="dragTagLine">drag and drop file to Upload</p>
+                        <span>Or</span>
+                        <label for="file">Select file (file format docx, pdf)</label>
+                        <input type="file" name="file" required>
+                        <div class="file-name"></div>
+                    </div>
+                    
+                    <div class="btn-wrap">
+                        <button class="prevtBtn">Previous</button>
+                        <button  class="nextBtn">Next</button>
+                    </div>
+                </div>
+                <div class="form-section3">
+                    <div class="input-group two-col">
+                        <div class="input-field">
+                            <label for="contractType">Placement Location</label>
+                            <select class="requiredField" name="contractType" required>
+                                <option value="">Select job job Type</option>
+                                <option value="Full time Job">Remote</option>
+                                <option value="Part time Job">On-site</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="contractType">Job type</label>
+                            <select class="requiredField" name="contractType" required>
+                                <option value="">Select job contract Type</option>
+                                <option value="Full-Time">Full Time</option>
+                                <option value="Part-Time">Part Time</option>
+                                <option value="Contract">Contract</option>
+                                <option value="Internship">Internship</option>
+                                <option value="Freelancer">Freelancer</option>
+                            </select>
+                        </div>
+                    </div>
+                    <h3 class="input-group-title">Salary Range</h3>
+                    <div class="inputs-group three-col">
+                        <div class="input-field">
+                            <label for="contractType">Currency</label>
+                            <select class="requiredField" name="contractType" required>
+                                <option value="">Select currency</option>
+                                <option value="$">USD</option>
+                                <option value="UGX">UGX</option>
+                                <option value="£">EUR</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="Salary-min">Minimum Value</label>
+                            <input type="number"  name="salary-min" placeholder="E.g $2000">
+                        </div>
+                        <div class="input-field">
+                            <label for="Salary-max">Maximum value</label>
+                            <input type="number" name="salary-max" placeholder="E.g $8000">
+                        </div>
+                    </div>
+                    <div class="inputs-group two-col">
+                        <div class="input-field">
+                            <label for="jobTitle">posting Date</label>
+                            <input type="date" class="requiredField" name="date" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="jobTitle">Application Deadline</label>
+                            <input type="date" class="requiredField" name="date" required>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label for="jobLink">Application Link</label>
+                        <input type="text" name="jobLink" placeholder="Enter job application link" required>
+                    </div>
+                    <div class="checkbox-wrap" style="margin-top: 20px;">
+                        <label for="jobTitle"></label>
+                        <input type="checkbox" name="jobTitle" required class="required">
+                        <span>I agree to the Terms and conditions</span>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="prevtBtn">Previous</button>
+                        <button type="submit" class="submitBtn">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- footer section -->
+        <!-- end of footer -->
+    </div>
+    <script src="jobListingsFormPage.js"></script>
+</body>
+</html>
